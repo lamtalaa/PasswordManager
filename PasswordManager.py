@@ -141,9 +141,10 @@ def main():
         print("1. Log in")
         print("2. Store password")
         print("3. Retrieve password")
-        print("4. Exit")
+        print("4. Generate strong password")
+        print("5. Exit")
 
-        choice = input("Enter your choice (1-4): ")
+        choice = input("Enter your choice (1-5): ")
 
         if choice == "1":
             login(stored_key, stored_salt)
@@ -171,6 +172,12 @@ def main():
             else:
                 print("Password not found.")
         elif choice == "4":
+            length = int(input("Enter the length of the password: "))
+
+            #Generate strong password
+            strong_password = generate_strong_password(length)
+            print(f"Strong password: {strong_password}") 
+        elif choice == "5":
             print("Goodbye!")
             break
         else:
