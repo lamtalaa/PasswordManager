@@ -1,3 +1,7 @@
+# Yassine Lamtalaa
+# 12/11/2023
+# Password Manager Application
+
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 import base64
